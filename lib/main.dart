@@ -1,5 +1,4 @@
-import 'package:appbar/page/simple_appbar_page.dart';
-import 'package:appbar/page/transparent_appbar_page.dart';
+import 'package:appbar/page/bottom_sheet_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green
       ),
-      home: const TranspatentAppbarPage(),
+      home: const BottomSheetPage(),
     );
   }
 }

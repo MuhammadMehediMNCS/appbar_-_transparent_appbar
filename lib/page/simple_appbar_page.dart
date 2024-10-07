@@ -18,53 +18,52 @@ class _SimpleAppbarPageState extends State<SimpleAppbarPage> {
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.menu)
+            icon: const Icon(Icons.menu, color: Colors.white)
           ),
           title: Text(widget.title),
           actions: [
             IconButton(
-              onPressed: () {}, 
+              onPressed: () {},
               icon: const Icon(Icons.search, color: Colors.white)
             ),
             IconButton(
-              onPressed: () {}, 
+              onPressed: () {},
               icon: const Icon(Icons.more_vert, color: Colors.white)
             )
           ],
+          //backgroundColor: Colors.blue,
           //centerTitle: true,
-          //backgroundColor: Colors.indigo,
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.indigo, Colors.purple],
-                begin: Alignment.bottomRight,
-                //end: Alignment.topLeft,
-              ),
+                colors: [Colors.blue, Colors.purple],
+                begin: Alignment.bottomLeft,
+                end: Alignment.topLeft
+              )
             ),
           ),
           bottom: const TabBar(
-            //isScrollable: true,
             indicatorColor: Colors.white,
-            indicatorWeight: 5,
+            indicatorWeight: 5.0,
             labelStyle: TextStyle(color: Colors.white),
             unselectedLabelColor: Colors.grey,
             tabs: [
-              Tab(icon: Icon(Icons.home, color: Colors.white), text: 'Home'),
-              Tab(icon: Icon(Icons.people, color: Colors.white), text: 'Friends'),
-              Tab(icon: Icon(Icons.notifications, color: Colors.white), text: 'Notifications'),
-            ],
+              Tab(icon: Icon(Icons.home), text: 'Home'),
+              Tab(icon: Icon(Icons.people), text: 'Friends'),
+              Tab(icon: Icon(Icons.notifications), text: 'Notifications'),
+
+            ]
           ),
-          elevation: 18.0,
           titleSpacing: 22.0,
           titleTextStyle: const TextStyle(color: Colors.white),
         ),
         body: TabBarView(
-            children: [
-              buildPage('Home Page'),
-              buildPage('Friends Page'),
-              buildPage('Notifications Page'),
-            ],
-          ),
+          children: [
+            buildPage("Home Page"),
+            buildPage("Friends Page"),
+            buildPage("Notifications Page"),
+          ]
+        ),
       ),
     );
   }
@@ -73,6 +72,6 @@ class _SimpleAppbarPageState extends State<SimpleAppbarPage> {
     child: Text(
       text,
       style: const TextStyle(fontSize: 32.0),
-    ),
+    )
   );
 }
